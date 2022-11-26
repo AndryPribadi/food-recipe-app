@@ -1,5 +1,6 @@
 import React from "react";
-
+import MealItem from "./MealItem";
+import RecipeIndex from "./RecipeIndex";
 const Meal = () => {
   return (
     <>
@@ -15,6 +16,17 @@ const Meal = () => {
         </div>
         <div className="searchBox">
           <input type="search" className="search-bar" />
+        </div>
+        <div className="container">
+          <MealItem />
+          <MealItem />
+          <MealItem />
+          <MealItem />
+          <MealItem />
+          <MealItem />
+        </div>
+        <div className="indexContainer">
+          <RecipeIndex />
         </div>
       </div>
     </>
