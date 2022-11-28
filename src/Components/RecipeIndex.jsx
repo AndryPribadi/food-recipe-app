@@ -33,7 +33,7 @@ const RecipeIndex = () => {
     <>
       {alpha.map((item) => {
         return (
-          <div className="numBox">
+          <div className="numBox" key={num++}>
             <h3>{item}</h3>
           </div>
         );

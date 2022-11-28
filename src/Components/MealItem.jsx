@@ -1,15 +1,18 @@
 import React from "react";
 
-const MealItem = () => {
+const MealItem = ({ data }) => {
   return (
     <>
-      <div className="card">
-        <img
-          src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
-          alt=""
-        />
-        <h3>Spicy Arrabiata Penne</h3>
-      </div>
+      {!data
+        ? "Not Found"
+        : data.map((item) => {
+            return (
+              <div className="card">
+                <img src={item.strMealThumb} alt="" />
+                <h3>{item.strMeal}</h3>
+              </div>
+            );
+          })}
     </>
   );
 };
